@@ -32,7 +32,7 @@ const app = createApp({
     },
     methods: {
       addTodo() {
-        this.todos.push({ id: id++, text: this.newTodo, done: false })
+        this.todos.unshift({ id: id++, text: this.newTodo, done: false })
         this.newTodo = ''
       },
       removeTodo(todo) {
