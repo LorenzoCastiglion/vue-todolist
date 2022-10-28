@@ -11,9 +11,9 @@ const app = createApp({
         
         newTodo: '',
         todos: [
-          { id: id++, text: 'Learn HTML', done: false },
-          { id: id++, text: 'Learn JavaScript', done: false },
-          { id: id++, text: 'Learn Vue', done: false }
+          { id: id++, text: 'Imparare HTML', done: false },
+          { id: id++, text: 'Imparare JavaScript', done: false },
+          { id: id++, text: 'Imparare Vue', done: false }
         ]
       }
     },
@@ -24,6 +24,11 @@ const app = createApp({
       },
       removeTodo(todo) {
         this.todos = this.todos.filter((t) => t !== todo)
+      },
+
+      toggle(index){
+        this.todos[index].done = !this.todos[index].done;
       }
+
     }
   }).mount('#app')

@@ -22,7 +22,7 @@
           <button>Add Todo</button>    
         </form>
         <ul>
-          <li v-for="todo in todos" :key="todo.id" :class="{ done: todo.done }">
+          <li v-for="(todo,index) in todos" :key="todo.id" :class="{ done: todo.done }" @click="toggle(index)" >
             {{ todo.text }}
             <button @click="removeTodo(todo)">X</button>
           </li>
