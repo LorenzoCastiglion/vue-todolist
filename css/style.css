@@ -34,10 +34,7 @@ h1{
     
   }
 
-  li{
-    font-family: 'Caveat', cursive;
-    font-size: 20px;
-  }
+ 
 
 
 
@@ -54,7 +51,7 @@ h1{
     top: 0;
     left: 0;
 
-    width: 100%;
+    width: 70%;
     height: 100%;
     z-index: 1;
     transition: all 0.5s;
@@ -66,7 +63,7 @@ h1{
     top: 0;
     left: 0;
 
-    width: 100%;
+    width: 70%;
     height: 100%;
     z-index: 1;
     transition: all 0.5s;

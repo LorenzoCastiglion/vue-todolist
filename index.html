@@ -31,7 +31,7 @@
           <ul class=" d-flex flex-column my-3 justify-content-center list-unstyled ">
             <li class="my-3 d-flex justify-content-around"  v-for="(todo,index) in todos" :key="todo.id"  >
               <span class="px-3" :class="{ done: todo.done }" @click="toggle(index)">  {{ todo.text }}</span>
-              <div  class="remove ms-2  " @click="removeTodo(todo)">--</i></div>
+              <div  class="remove ms-2  text-white" @click="removeTodo(todo)">--</i></div>
             </li>
           </ul>
         </div>
