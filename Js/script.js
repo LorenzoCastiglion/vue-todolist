@@ -24,17 +24,24 @@ const app = createApp({
         
         newTodo: '',
         todos: [
-          { id: id++, text: 'Imparare HTML', done: false },
-          { id: id++, text: 'Imparare JavaScript', done: false },
-          { id: id++, text: 'Imparare Vue', done: false }
+          { id: id++, text: 'Imparare HTML', done: false, hasError:false },
+          { id: id++, text: 'Imparare JavaScript', done: false , hasError:false},
+          { id: id++, text: 'Imparare Vue', done: false, hasError:false }
         ]
+
       }
     },
     methods: {
       addTodo() {
-        this.todos.unshift({ id: id++, text: this.newTodo, done: false })
+        if (this.newTodo.length < 7){
+          this.hasError = true
+        } else{
+          this.hasError = false;
+          this.todos.unshift({ id: id++, text: this.newTodo, done: false })
+        }
         this.newTodo = ''
       },
+
       removeTodo(todo) {
         this.todos = this.todos.filter((btn) => btn !== todo)
       },

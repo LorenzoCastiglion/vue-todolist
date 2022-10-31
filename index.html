@@ -21,9 +21,10 @@
         <h1 class="text-uppercase">to do list</h1>
         <!-- utilizzo form e @submission così da integrare direttamente il :key="enter" del bonus -->
         <form @submit.prevent="addTodo">
-          <input v-model="newTodo">
+          <input class="text-center fs-6 " v-model="newTodo" placeholder="insert task">
           <br>
-          <button class="mt-2">Add Todo</button>    
+          <button class="mt-2 px-3">Add Todo</button>    
+          <div v-if="hasError">Il task richiede almeno 7 battute</div>
         </form>
         <div class=" row flex-column ">
           <ul class=" d-flex flex-column my-3 justify-content-center list-unstyled ">
